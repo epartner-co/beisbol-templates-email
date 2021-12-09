@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{_accountInfo.TradingName}}</title>
+  <!-- * Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- */ Fonts -->
+</head>
+
+<body style="font-family: 'Urbanist', sans-serif; box-sizing: border-box;">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 40rem;">
+          <tbody>
+
+            <!-- * Header-->
+            <tr style="background-color: #fff;">
+              <td align="center">
+                <div style="display: flex; align-items: center; padding-top: 1rem; width: 60%; margin: 0 auto;">
+                  <a href="#" style="width: 90%;padding-bottom:10px">
+                    <img src="https://beisbol.vteximg.com.br/arquivos/icon-top-mail.png" alt="Logo" style="width: 60%;">
+                  </a>
+                </div>
+                <div style="background: #fff">
+                  <div style="display: flex; align-items: center;  padding-top: 1rem; margin-top: 1rem; padding: 1rem;width: 100%;margin: 0 auto;">
+                    <a href="#" target="_blank" rel="noopener noreferrer" style="padding: 0 2rem; font-size: 20px; text-decoration: none; text-transform: capitalize; color: #28508C;">
+                      Categoria 1
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" style="padding: 0 2rem; font-size: 20px; text-decoration: none; text-transform: capitalize; color: #28508C;">
+                      Categoria 2
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" style="padding: 0 2rem; font-size: 20px; text-decoration: none; text-transform: capitalize; color: #28508C;">
+                      Categoria 3
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" style="padding: 0 2rem; font-size: 20px; text-decoration: none; text-transform: capitalize; color: #28508C;">
+                      Categoria 3
+                    </a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- * Banner -->
+            <tr style="background-color: #fff;">
+              <td>
+                <div>
+                  <img src="https://racketball.vteximg.com.br/arquivos/Banner-Orden-Recibida-Mail.jpg" alt="Banner image" style="width: 100%;">
+                </div>
+              </td>
+            </tr>
+
+            <!-- * Top text -->
+            <tr style="background-color: #fff;">
+              <td>
+                <h1 style="margin: 0; line-height: 40px; text-align: center; color: #28508C; padding: 3rem 0 0; font-weight: 700; font-size: 35px;">Hola, {{orders.0.clientProfileData.firstName}}</h1>
+                <h1 style="margin: 0; font-size: 25px; font-weight: 400; line-height: 40px; text-align: center; color: #0891D0;">¡Tu pago no ha sido aprobado!</h1>
+                <hr style="width: 15%; margin-top: 2rem; margin-bottom: 1rem;">
+                <p style="margin: 0; font-weight: 400; text-align: center; margin-right: 2rem; margin-left: 2rem; font-size: 15px; line-height: 25px; color: #0891D0;">
+                  El pedido fue recibido y está en proceso de validación del pago, <br> una vez este sea aprobado recibirás un nuevo mensaje de confirmación.
+                </p>
+                <hr class="horizontal-line horizontal-line--bottom" style="width: 15%; margin-top: 1rem; margin-bottom: 2rem;">
+              </td>
+            </tr>
+
+            <!-- * Images breadcrumb -->
+            <tr style="background-color: #fff;">
+              <td>
+                <div style="display: flex; align-items: center; padding: 2rem;width: 85%;text-align: center;margin: 0 auto;">
+                  <div style="z-index: 2;margin: 0 2rem">
+                    <img src="https://beisbol.vteximg.com.br/arquivos/Orden-Recibida-Icono-Mail.png" alt="Orden recibida logo" style="width: 115px;" width="115">
+                    <p style="font-weight: bold; color: #5cca07;">Orden Recibida</p>
+                  </div>
+                  <div style="z-index: 2;margin: 0 2rem">
+                    <img src="https://beisbol.vteximg.com.br/arquivos/No-Procesado-Icono-Mail.png" alt="Pago aprobado logo" style="width: 115px;" width="115">
+                    <p style="color: #28508C;">Pago Aprobado</p>
+                  </div>
+                  <div style="z-index: 2;margin: 0 2rem">
+                    <img src="https://beisbol.vteximg.com.br/arquivos/Por-Facturar-Icono-Mail.png" alt="Pedido enviado logo" style="width: 115px;" width="115">
+                    <p style="color: #28508C;">Pedido Enviado</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- * Order number info -->
+            {{#each orders}}
+            <tr style="background-color: #fff;">
+              <td style="padding: 2rem;">
+                <h2 style="margin: 0; font-size: 18px; text-align: center;color:#28508C;">
+                  Número de pedido: {{orderId}}
+                </h2>
+              </td>
+            </tr>
+            {{/each}}
+
+            <!-- * Boxes whites -->
+            <tr style="background-color: #fff;">
+              <td>
+                <table style="width: 100%;">
+                  <tbody style="display: flex;  align-items: center;">
+
+                    {{#each orders}}
+                    <!-- * Box Address -->
+                    <tr style="display: flex;  margin: 1rem; width: 50%; height: 12rem; max-height: 12rem; font-size: 14px; border-radius: 20px; background-color: #fff; margin-right: 0.5rem; overflow: auto;">
+                      <td style="width: 100%">
+                        {{#richShippingData shippingData}}
+                        {{#group logisticsInfo by="addessId"}}
+
+                        <div>
+                          {{#compare items.0.selectedDeliveryChannel '==' null}}
+                          <div style="margin: 0 2rem 1rem 2rem; text-align: center;">
+                            <h4 style="margin: 1.6rem 2rem 1.3rem 2rem; padding-bottom: 0.5rem; font-weight: 700; font-size: 14px; color: white; border-bottom: 0.1rem solid #e0e0e0;">Productos a Recibir</h4>
+                            {{#if orders.0.giftRegistryData}}
+                            {{orders.0.giftRegistryData.description}}
+                            {{else}}
+                            {{#each ../../shippingData.availableAddresses}}
+                            {{#eq ../addressId AddressId}}
+                            <strong>{{receiverName}}</strong>
+                            <br>{{street}}, {{number}}{{#if complement}} - {{complement}}{{/if}}
+                            <br>{{neighborhood}} - {{city}} - {{state}}
+                            <br>CEP {{postalCode}}
+                            {{/eq}}
+                            {{/each}}
+                            {{/if}}
+                          </div>
+                          {{/compare}}
+                          {{#eq items.0.selectedDeliveryChannel "delivery"}}
+                          <div style="margin: 0 2rem 1rem 2rem; text-align: center;">
+                            {{#if orders.0.giftRegistryData}}
+                            {{orders.0.giftRegistryData.description}}
+                            {{else}}
+                            {{#each ../../shippingData.availableAddresses}}
+                            {{#eq ../addressId AddressId}}
+                            <div>
+                              <h3 style="margin: 1.6rem 2rem 1.3rem 2rem; padding-bottom: 0.5rem; font-weight: 700; font-size: 14px; color: white; border-bottom: 0.1rem solid #e0e0e0;">Dirección de entrega</h3>
+                              <strong>{{receiverName}}</strong>
+                              <br>{{street}}, {{number}}{{#if complement}} - {{complement}}{{/if}}
+                              <br>{{neighborhood}} - {{city}} - {{state}}
+                              <br>CEP {{postalCode}}
+                              {{/eq}}
+                              {{/each}}
+                              {{/if}}
+                            </div>
+                          </div>
+                          {{/eq}}
+                          {{/group}}
+                          {{/richShippingData}}
+                        </div>
+                      </td>
+                    </tr>
+                    {{/each}}
+
+                    <!-- * Box Payment -->
+                    {{#compare split "!=" true}}
+                    <tr style="display: flex;  margin: 1rem; width: 50%; height: 12rem; max-height: 12rem; font-size: 14px; border-radius: 20px; background-color: #fff; margin-left: 0.5rem;">
+                      <td style="width: 100%">
+                        <div style="padding: 1rem; padding-top: 0; text-align: center;">
+                          <h3 style="margin: 1.6rem 2rem 1.3rem 2rem; padding-bottom: 0.5rem; font-weight: 700; font-size: 14px; color: white; border-bottom: 0.1rem solid #e0e0e0;">Medio de pago</h3>
+                          {{#each orders.0.paymentData.transactions}}
+                          {{#compare payments.length "==" 1}}
+                          {{#each payments}}
+                          <div style="margin: 0 2rem; line-height: 1.5; font-size: 14px;">
+                            {{paymentSystemName}}
+                            {{#if lastDigits}} final {{lastDigits}} {{/if}}
+                            <br>$ {{formatCurrency value}}
+                            {{#eq installments 1}}
+                            Total
+                            {{else}}
+                            en {{installments}}x
+                            {{/eq}}
+                          </div>
+                          {{/each}}
+                          {{/compare}}
+                        </div>
+                        {{#compare payments.length "!=" 1}}
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          {{#each payments}}
+                          <tr>
+                            <td style="padding-bottom: 0.25rem; font-size: 1rem; line-height: 20px; border-bottom: 0.1rem solid #000000;">
+                              {{paymentSystemName}}
+                              {{#if lastDigits}} final {{lastDigits}} {{/if}}
+                              {{#eq installments 1}}
+                              Total
+                              {{else}}
+                              en {{installments}}x
+                              {{/eq}}
+                            </td>
+                            <td align="left" style="padding-bottom: 0.25rem; font-size: 1rem; line-height: 20px; border-bottom: 0.1rem solid #000000; padding-top: 0.25rem;">$ {{formatCurrency value}}</td>
+                          </tr>
+                          {{/each}}
+                        </table>
+                        {{/compare}}
+                        {{/each}}
+                      </td>
+                    </tr>
+                    {{/compare}}
+
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            <!-- * Products description -->
+            <tr style="box-sizing: border-box !important; background-color: #fff;">
+              <td align="left">
+                {{#each orders}}
+                {{#richShippingData shippingData}}
+                {{#group logisticsInfo by="packageId"}}
+                {{#each items}}
+                {{#compare @index '==' 0}}
+                <div style="max-width: 100%; padding-bottom: .5rem; padding-top: 1rem !important;">
+                  <div style="box-sizing: border-box;">
+                    <div>
+                      <div style="padding:10px;">
+                        {{#each ../../../items}}
+                        {{#compare id '==' ../../items.0.itemId}}
+                        <div style="align-items:center;justify-content:center;display:flex;box-sizing: border-box; font-weight: 700; width: 100% !important;padding-bottom:20px">
+                          <div style="width:20%;">
+                            <img style="width:100%" src="{{imageUrl}}" />
+                          </div>
+                          <div style="width:55%; font-weight: 100;padding: 0 13px;min-height: 150px;max-height: 150px;">
+                            <h4 style="text-align:left;width:100%;padding:10px 0px;color:black;margin: 0; font-size: 14px; line-height: 29px; letter-spacing: .9pt; box-sizing: border-box; margin-bottom: .5rem !important;">Nombre de producto</h4>
+                            <h6 style="font-weight: 100;text-align:left;width:100%;padding:10 0px;color:black;margin: 0; font-size: 12px; line-height: 29px; letter-spacing: .9pt; box-sizing: border-box; margin-bottom: .5rem !important;">{{name}}</h6>
+                          </div>
+                          <div style="display:block;width:25%;min-height: 150px;max-height: 150px;">
+                            <h4 style="text-align:left;width:100%;padding:10px 0px;color:black;margin: 0; font-size: 14px; line-height: 29px; letter-spacing: .9pt; box-sizing: border-box; margin-bottom: .5rem !important;">Cantidad</h4>
+                            <h6 style="font-weight: 100;text-align:left;width:100%;padding:10 0px;color:black;margin: 0; font-size: 12px; line-height: 29px; letter-spacing: .9pt; box-sizing: border-box; margin-bottom: .5rem !important;">{{quantity}}</h6>
+                          </div>
+                          <div style="display:block;width:25%;min-height: 150px;max-height: 150px;">
+                            <h4 style="text-align:left;width:100%;padding:10px 0px;color:black;margin: 0; font-size: 14px; line-height: 29px; letter-spacing: .9pt; box-sizing: border-box; margin-bottom: .5rem !important;">Precio</h4>
+                            <h6 style="font-weight: 100;text-align:left;width:100%;padding:10 0px;color:black;margin: 0; font-size: 12px; line-height: 29px; letter-spacing: .9pt; box-sizing: border-box; margin-bottom: .5rem !important;">
+                              {{#if price}}
+                              $ {{formatCurrency price}}
+                              {{else}}
+                              Gratis
+                              {{/if}}
+                            </h6>
+                          </div>
+                        </div>
+                        {{/compare}}
+                        {{/each}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {{/compare}}
+                {{/each}}
+                {{/group}}
+                {{/richShippingData}}
+                {{/each}}
+              </td>
+            </tr>
+
+            <!-- * Payment values  -->
+            {{#each orders}}
+            <tr style="background-color: var(--color-gray);">
+              <td align="left" style="padding: 2rem; width: 100%; text-align: left; font-size: 14px;" width="100%">
+                <div style="display: flex; flex-direction: row; padding-bottom: 3rem;">
+                  <div style="padding-right: 2rem; font-size: 10px; color: #0891D0;">
+                    <p>Si seleccionaste pago contra entrega, el pago será recibido en el momento en que hagamos la entrega del pedido, recuerda tener el valor exacto ya que el transportador no tienen cambio.
+                    </p>
+                    <p>
+                      Si seleccionaste pago en efectivo a través de Baloto debes tener en cuenta estos pasos:
+                    </p>
+                    <p>
+                      Imprime el código para pago en puntos baloto en el botón imprimir comprobante y dirigido al punto baloto más cercano y realizar el pago de tu pedido.
+                      <br />
+                      Recuerda que tienes 72 horas desde la confirmación de tu pedido para realizar el pago, de lo contrario tu pedido será cancelado automáticamente
+                    </p>
+                  </div>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin: 0 2rem 0 0; border-top: 0.1rem solid #e0e0e0; border-bottom: 0.1rem solid #e0e0e0;">
+                    <tbody style="vertical-align: middle;">
+                      {{#each totals}}
+                      {{#if value}}
+                      <tr style="height: 1rem;">
+                        <td align="left" style="color: #6A6A6A; font-weight: bold;">
+                          {{#eq id "Items"}}Subtotal{{/eq}}
+                          {{#eq id "Discounts"}}Descuentos{{/eq}}
+                          {{#eq id "Shipping"}}Valor flete{{/eq}}
+                          {{#eq id "Tax"}}IVA{{/eq}}
+                        </td>
+                        <td align="right" style="line-height: 20px; text-align: right; font-size: 14px; color: #6A6A6A;">$ {{formatCurrency value}}</td>
+                      </tr>
+                      {{/if}}
+                      {{/each}}
+                      {{#if value}}
+                      <tr style="height: 1rem;">
+                        <td align="left" style="font-weight: bold; color: #000000;">Total</td>
+                        <td align="right" style="line-height: 20px; text-align: right; font-size: 14px; color: #000000; font-weight: bold;">$ {{formatCurrency value}}</td>
+                      </tr>
+                      {{/if}}
+                    </tbody>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            {{/each}}
+
+            <!-- * Icons Data -->
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; padding: 2rem; background: #28508C;width: auto;margin: 0 auto;">
+                  <div style="padding: 0 1rem; height: 12.3rem; text-align: center;text-align: center;">
+                    <div>
+                      <img src="https://beisbol.vteximg.com.br/arquivos/envio-icono-mail.png" alt="Envio gratis logo" style="width: 70%;">
+                    </div>
+                    <h4 style="margin-bottom: 0; text-transform: uppercase; color: white;font-weight: 700;">Envío gratis</h4>
+                    <p style=" color: white;text-transform: uppercase;padding-top:0;">Por compras superiores <br> a $90.000</p>
+                  </div>
+                  <div style="padding: 0 1rem; height: 13rem; text-align: center;text-align: center;">
+                    <div>
+                      <img src="https://beisbol.vteximg.com.br/arquivos/pago-icono-mail.png" alt="Pago seguro logo" style="width: 70%;">
+                    </div>
+                    <h4 style="margin-bottom: 0; text-transform: uppercase; color: white;font-weight: 700;">Paga Seguro</h4>
+                    <p style=" color: white;text-transform: uppercase;padding-top:0;">Tarjetas de Crédito, PSE,<br> Efecty, Baloto</p>
+                  </div>
+                  <div style="padding: 0 1rem; height: 12.9rem; text-align: center;text-align: center;">
+                    <div>
+                      <img src="https://beisbol.vteximg.com.br/arquivos/Devoluciones-Icono-Mail.png" alt="Devoluciones logo" style="width: 70%;">
+                    </div>
+                    <h4 style="margin-bottom: 0; text-transform: uppercase; color: white;font-weight: 700;">Devoluciones</h4>
+                    <p style=" color: white;text-transform: uppercase;padding-top:0;">Gratis</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- * Footer information -->
+            <tr>
+              <td>
+                <div style="padding: 2rem;">
+                  <div style="display: flex;width: 35%;margin: 0 auto;">
+                    <div style="display: flex; align-items: center; ">
+                      <span style="padding: 1rem 0rem 0.5rem;">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          <img src="https://beisbol.vteximg.com.br/arquivos/youtubre-icono-mail.png" alt="Youtube logo">
+                        </a>
+                      </span>
+                      <span style="padding: 1rem 0.5rem 0.5rem;">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          <img src="https://beisbol.vteximg.com.br/arquivos/Facebook-Icono-Mail.png" alt="facebook logo">
+                        </a>
+                      </span>
+                      <span style="padding: 1rem 0rem 0.5rem;">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          <img src="https://beisbol.vteximg.com.br/arquivos/Instagram-Icono-Mail.png" alt="Instagram logo">
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; width:80%;margin:0px auto">
+                    <div>
+                      <p style="text-align: center; text-decoration: none; font-size: 15px; color: #28508C;">
+                        <a href="#" style="color: #28508C; text-decoration: none;">Términos y condiciones</a>
+                        |
+                        <a href="#" style="color: #28508C; text-decoration: none;">Políticas de envíos, cambios y garantías</a>
+                        |
+                        <a href="#" style="color: #28508C; text-decoration: none;">Políticas de privacidad</a>
+                        <br>
+                        <a href="#" style="color: #28508C; text-decoration: none;">contacto@contacto.com</a>
+                        |
+                        <a href="#" style="color: #28508C; text-decoration: none;">Beisbol</a>
+                        | NIT 9000000000-1 <br>
+                        2021 Todos los derechos Reservados
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
